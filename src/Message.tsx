@@ -1,16 +1,11 @@
-import React from 'react';
+import React from 'react'
+import messageHOC from './HOC';
 
-interface UserMessage {
-    name: string;
-    message: string;
-}
+const example = (props: any): any => (
+	<p>
+		{props.name}, {props.message}
+	</p>
+);
 
-const Message = (props: UserMessage): any => {
-	return (
-		<div>
-            <p>{props.name}, {props.message}</p>
-		</div>
-	);
-};
-
+const Message = messageHOC(example);
 export default Message;
