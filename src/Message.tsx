@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Message = () => {
-    return (
-        <div>
-            <p>This is a quick message!</p>
-        </div>
-    )
-}
+const Message = (prop: { message: string }): any => {
+	return (
+		<div>
+			<p>{prop.message}</p>
+		</div>
+	);
+};
 
-export default Message
+export default Message;
